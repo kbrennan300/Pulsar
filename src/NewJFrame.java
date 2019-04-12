@@ -9,7 +9,7 @@
  * @author Kenny
  */
 public class NewJFrame extends javax.swing.JFrame {
-
+    public FileHandler fileHandler = new FileHandler("inlist_RSP_Cephied");
     /**
      * Creates new form NewJFrame
      */
@@ -28,35 +28,51 @@ public class NewJFrame extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        jLabel10 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jTextField5 = new javax.swing.JTextField();
+        Period_Text = new javax.swing.JTextField();
         jRadioButton1 = new javax.swing.JRadioButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        Period_Label = new javax.swing.JLabel();
+        Temperature_Label = new javax.swing.JLabel();
+        Mass_Text = new javax.swing.JTextField();
+        Mass_Label = new javax.swing.JLabel();
+        Lumosity_Label = new javax.swing.JLabel();
+        Lumosity_Text = new javax.swing.JTextField();
         jRadioButton2 = new javax.swing.JRadioButton();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        X_Text = new javax.swing.JTextField();
+        X_Label = new javax.swing.JLabel();
+        Temp_Text = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        Z_Label = new javax.swing.JLabel();
+        Z_Text = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new java.awt.GridBagLayout());
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel10.setText("MESA Interface");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipady = 9;
+        gridBagConstraints.insets = new java.awt.Insets(17, 0, 17, 0);
+        getContentPane().add(jLabel10, gridBagConstraints);
 
         jPanel1.setLayout(new java.awt.GridBagLayout());
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridy = 12;
         gridBagConstraints.gridwidth = 5;
         gridBagConstraints.ipadx = 495;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(14, 5, 0, 12);
-        jPanel1.add(jTextField5, gridBagConstraints);
+        jPanel1.add(Period_Text, gridBagConstraints);
 
         buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("RSP_Cephied");
+        jRadioButton1.setText("Cepheid");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton1ActionPerformed(evt);
@@ -70,18 +86,18 @@ public class NewJFrame extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(9, 12, 0, 0);
         jPanel1.add(jRadioButton1, gridBagConstraints);
 
-        jLabel5.setText("RSP_Z");
+        Period_Label.setText("Periods");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridy = 12;
         gridBagConstraints.gridheight = 2;
         gridBagConstraints.ipadx = 45;
         gridBagConstraints.ipady = 21;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(7, 12, 0, 0);
-        jPanel1.add(jLabel5, gridBagConstraints);
+        jPanel1.add(Period_Label, gridBagConstraints);
 
-        jLabel2.setText("RSP_Teff");
+        Temperature_Label.setText("Temperature");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
@@ -90,11 +106,12 @@ public class NewJFrame extends javax.swing.JFrame {
         gridBagConstraints.ipady = 21;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(7, 12, 0, 0);
-        jPanel1.add(jLabel2, gridBagConstraints);
+        jPanel1.add(Temperature_Label, gridBagConstraints);
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        Mass_Text.setName("Mass_Text"); // NOI18N
+        Mass_Text.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                Mass_TextActionPerformed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -104,9 +121,9 @@ public class NewJFrame extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 495;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(25, 5, 0, 12);
-        jPanel1.add(jTextField1, gridBagConstraints);
+        jPanel1.add(Mass_Text, gridBagConstraints);
 
-        jLabel1.setText("RSP_Mass");
+        Mass_Label.setText("Mass");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
@@ -115,9 +132,9 @@ public class NewJFrame extends javax.swing.JFrame {
         gridBagConstraints.ipady = 21;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(18, 12, 0, 0);
-        jPanel1.add(jLabel1, gridBagConstraints);
+        jPanel1.add(Mass_Label, gridBagConstraints);
 
-        jLabel3.setText("RSP_L");
+        Lumosity_Label.setText("Lumosity");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 6;
@@ -126,7 +143,7 @@ public class NewJFrame extends javax.swing.JFrame {
         gridBagConstraints.ipady = 21;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(7, 12, 0, 0);
-        jPanel1.add(jLabel3, gridBagConstraints);
+        jPanel1.add(Lumosity_Label, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 6;
@@ -134,10 +151,10 @@ public class NewJFrame extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 495;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(14, 5, 0, 12);
-        jPanel1.add(jTextField3, gridBagConstraints);
+        jPanel1.add(Lumosity_Text, gridBagConstraints);
 
         buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("RSP_RR_Lyrae");
+        jRadioButton2.setText("RR Lyrae");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton2ActionPerformed(evt);
@@ -157,9 +174,9 @@ public class NewJFrame extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 495;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(14, 5, 0, 12);
-        jPanel1.add(jTextField4, gridBagConstraints);
+        jPanel1.add(X_Text, gridBagConstraints);
 
-        jLabel4.setText("RSP_X");
+        X_Label.setText("X");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 8;
@@ -168,7 +185,7 @@ public class NewJFrame extends javax.swing.JFrame {
         gridBagConstraints.ipady = 21;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(7, 12, 0, 0);
-        jPanel1.add(jLabel4, gridBagConstraints);
+        jPanel1.add(X_Label, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
@@ -176,7 +193,7 @@ public class NewJFrame extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 495;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(14, 5, 0, 12);
-        jPanel1.add(jTextField2, gridBagConstraints);
+        jPanel1.add(Temp_Text, gridBagConstraints);
 
         jButton2.setText("Submit");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -186,44 +203,90 @@ public class NewJFrame extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 12;
+        gridBagConstraints.gridy = 13;
         gridBagConstraints.gridwidth = 6;
         gridBagConstraints.ipadx = 1;
         gridBagConstraints.ipady = 8;
         gridBagConstraints.insets = new java.awt.Insets(24, 0, 24, 0);
         jPanel1.add(jButton2, gridBagConstraints);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 664, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(98, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 445, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(69, 69, 69))
-        );
+        Z_Label.setText("Z");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 45;
+        gridBagConstraints.ipady = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(7, 12, 0, 0);
+        jPanel1.add(Z_Label, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.ipadx = 495;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(14, 5, 0, 12);
+        jPanel1.add(Z_Text, gridBagConstraints);
+
+        jLabel7.setText("Z");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 45;
+        gridBagConstraints.ipady = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(7, 12, 0, 0);
+        jPanel1.add(jLabel7, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.ipadx = 495;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(14, 5, 0, 12);
+        jPanel1.add(jTextField7, gridBagConstraints);
+
+        jLabel8.setText("Z");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 45;
+        gridBagConstraints.ipady = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(7, 12, 0, 0);
+        jPanel1.add(jLabel8, gridBagConstraints);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 29;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 7, 0);
+        getContentPane().add(jPanel1, gridBagConstraints);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
+        fileHandler.ChangeFile("inlist_rsp_Cepheid");
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         // TODO add your handling code here:
+        fileHandler.ChangeFile("inlist_rsp_RR_Lyrae");
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void Mass_TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mass_TextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_Mass_TextActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        fileHandler.UpdateFile(Mass_Text.getText(), Temp_Text.getText(), Lumosity_Text.getText(), X_Text.getText(), Z_Text.getText());
         System.exit(0);//Exit system
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -263,20 +326,26 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Lumosity_Label;
+    private javax.swing.JTextField Lumosity_Text;
+    private javax.swing.JLabel Mass_Label;
+    private javax.swing.JTextField Mass_Text;
+    private javax.swing.JLabel Period_Label;
+    private javax.swing.JTextField Period_Text;
+    private javax.swing.JTextField Temp_Text;
+    private javax.swing.JLabel Temperature_Label;
+    private javax.swing.JLabel X_Label;
+    private javax.swing.JTextField X_Text;
+    private javax.swing.JLabel Z_Label;
+    private javax.swing.JTextField Z_Text;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
 }
