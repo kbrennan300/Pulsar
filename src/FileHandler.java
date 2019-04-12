@@ -43,25 +43,35 @@ public class FileHandler {
             String temp = list.get(i);
             System.out.println("I: "+ i + "Temp2: " +temp);
             if(temp.contains("RSP_mass")) {
-                temp = temp.replaceAll(temp,"   RSP_mass = "+ mass + System.lineSeparator());
-                list.set(i, temp);
+                if (strcmp(mass, "") != 0) {
+                    temp = temp.replaceAll(temp, "   RSP_mass = " + mass + System.lineSeparator());
+                    list.set(i, temp);
+                }
             }
             else if(temp.contains("RSP_Teff")) {
-                temp = temp.replaceAll(temp, "   RSP_Teff = "+ temperature + System.lineSeparator());
-                list.set(i, temp);
+                if (strcmp(temperature, "") != 0) {
+                    temp = temp.replaceAll(temp, "   RSP_Teff = " + temperature + System.lineSeparator());
+                    list.set(i, temp);
+                }
             }
             else if(temp.contains("RSP_L")) {
-                temp = temp.replaceAll(temp, "   RSP_L = "+ l + System.lineSeparator());
-                list.set(i, temp);
+                if (strcmp(l, "") != 0) {
+                    temp = temp.replaceAll(temp, "   RSP_L = " + l + System.lineSeparator());
+                    list.set(i, temp);
+                }
             }
             
             else if(temp.contains("RSP_X")) {
-                temp = temp.replaceAll(temp, "   RSP_X = "+ x + System.lineSeparator());
-                list.set(i, temp);
+                if (strcmp(x, "") != 0) {
+                    temp = temp.replaceAll(temp, "   RSP_X = " + x + System.lineSeparator());
+                    list.set(i, temp);
+                }
             }
             else if (temp.contains("RSP_Z")) {
-                temp = temp.replaceAll(temp, "   RSP_Z = "+ z + System.lineSeparator());
-                list.set(i, temp);
+                if (strcmp(z, "") != 0) {
+                    temp = temp.replaceAll(temp, "   RSP_Z = " + z + System.lineSeparator());
+                    list.set(i, temp);
+                }
             }
             else{}
            i++;
