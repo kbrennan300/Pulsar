@@ -43,32 +43,32 @@ public class FileHandler {
             String temp = list.get(i);
             System.out.println("I: "+ i + "Temp2: " +temp);
             if(temp.contains("RSP_mass")) {
-                if (strcmp(mass, "") != 0) {
+                if (!mass.equals("")) {
                     temp = temp.replaceAll(temp, "   RSP_mass = " + mass + System.lineSeparator());
                     list.set(i, temp);
                 }
             }
             else if(temp.contains("RSP_Teff")) {
-                if (strcmp(temperature, "") != 0) {
+                if (!temperature.equals("")) {
                     temp = temp.replaceAll(temp, "   RSP_Teff = " + temperature + System.lineSeparator());
                     list.set(i, temp);
                 }
             }
             else if(temp.contains("RSP_L")) {
-                if (strcmp(l, "") != 0) {
+                if (!l.equals("")) {
                     temp = temp.replaceAll(temp, "   RSP_L = " + l + System.lineSeparator());
                     list.set(i, temp);
                 }
             }
             
             else if(temp.contains("RSP_X")) {
-                if (strcmp(x, "") != 0) {
+                if (!x.equals("")) {
                     temp = temp.replaceAll(temp, "   RSP_X = " + x + System.lineSeparator());
                     list.set(i, temp);
                 }
             }
             else if (temp.contains("RSP_Z")) {
-                if (strcmp(z, "") != 0) {
+                if (!z.equals("")) {
                     temp = temp.replaceAll(temp, "   RSP_Z = " + z + System.lineSeparator());
                     list.set(i, temp);
                 }
