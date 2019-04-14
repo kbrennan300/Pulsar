@@ -36,8 +36,8 @@ public class FileHandler {
             index++;
         }
         inFile.close();
-        System.out.println("File closed");
-        System.out.println("List size: " + list.size());
+        //System.out.println("File closed");
+        //System.out.println("List size: " + list.size());
         int i = 0;
         while(i< list.size()){
             String temp = list.get(i);
@@ -76,7 +76,7 @@ public class FileHandler {
             else{}
            i++;
         }
-        System.out.println("List modified");
+        //System.out.println("List modified");
         try {
             outFile = new FileWriter(file);
         } catch (IOException ex) {

@@ -10,6 +10,7 @@
  */
 public class NewJFrame extends javax.swing.JFrame {
     public FileHandler fileHandler = new FileHandler("inlist_RSP_Cephied");
+    public CommandHandler commandHandler;
     /**
      * Creates new form NewJFrame
      */
@@ -287,6 +288,8 @@ public class NewJFrame extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         fileHandler.UpdateFile(Mass_Text.getText(), Temp_Text.getText(), Lumosity_Text.getText(), X_Text.getText(), Z_Text.getText());
+        
+        commandHandler = new CommandHandler("rsp_RR_Lyrae");
         System.exit(0);//Exit system
     }//GEN-LAST:event_jButton2ActionPerformed
 
