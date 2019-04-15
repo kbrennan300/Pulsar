@@ -1,8 +1,6 @@
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class CommandHandler {
@@ -16,8 +14,8 @@ public class CommandHandler {
         String[] commands = new String[1];
         String[] envp = new String[1];
         envp[0] = "";
-        commands[0] = "ls";
-        File f = new File("/home/"+System.getProperty("user.name")+"/mesa/star/test_suite/"+this.starName);
+        commands[0] = "./mk";
+        File f = new File(System.getProperty("user.home")+"/mesa/star/test_suite/"+this.starName);
         try {
             p = Runtime.getRuntime().exec(commands,envp,f);
             BufferedReader br = new BufferedReader(
@@ -39,4 +37,3 @@ public class CommandHandler {
     }
     
 }
-

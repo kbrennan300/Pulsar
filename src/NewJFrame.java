@@ -11,6 +11,7 @@
 public class NewJFrame extends javax.swing.JFrame {
     public FileHandler fileHandler = new FileHandler("inlist_RSP_Cephied");
     public CommandHandler commandHandler;
+    public String model;
     /**
      * Creates new form NewJFrame
      */
@@ -274,11 +275,13 @@ public class NewJFrame extends javax.swing.JFrame {
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
         fileHandler.ChangeFile("inlist_rsp_Cepheid");
+        model = "rsp_Cepheid";
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         // TODO add your handling code here:
         fileHandler.ChangeFile("inlist_rsp_RR_Lyrae");
+        model = "rsp_RR_Lyrae";
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void Mass_TextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Mass_TextActionPerformed
@@ -288,14 +291,10 @@ public class NewJFrame extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         fileHandler.UpdateFile(Mass_Text.getText(), Temp_Text.getText(), Lumosity_Text.getText(), X_Text.getText(), Z_Text.getText());
-        
-        commandHandler = new CommandHandler("rsp_RR_Lyrae");
+        commandHandler = new CommandHandler(model);
         System.exit(0);//Exit system
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

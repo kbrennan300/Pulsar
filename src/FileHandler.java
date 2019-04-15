@@ -41,7 +41,7 @@ public class FileHandler {
         int i = 0;
         while(i< list.size()){
             String temp = list.get(i);
-            System.out.println("I: "+ i + "Temp2: " +temp);
+            //System.out.println("I: "+ i + " Temp2: " +temp);
             if(temp.contains("RSP_mass")) {
                 if (!mass.equals("")) {
                     temp = temp.replaceAll(temp, "   RSP_mass = " + mass + System.lineSeparator());
